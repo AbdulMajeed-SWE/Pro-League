@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylee.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <form
+        action="https://www.google.com/search"
+        method="get"
+        class="search-bar"
+      >
+        <input type="text" placeholder="Search..." />
+        <!--        <button type="submit"><img src="search.png"> </button>-->
+      </form>
+      <ul>
+        <li>
+          <a href="/" style="color: white; font-family: Alef"
+            ><i class="fas fa-home"></i>home</a
+          >
+        </li>
+
+        <li>
+          <a href="#" style="color: white; font-family: Alef"
+            ><i style="margin-right: 20px" class="fas fa-heart"></i>favorite</a
+          >
+        </li>
+      </ul>
+
+      <div style="position: fixed; bottom: 0">
+        <hr width="250px" style="margin-right: 10px; margin-left: 20px" />
+        <ul>
+          <li>
+            <a
+              href="#"
+              style="color: white; font-family: Alef; font-size: large"
+              ><img
+                class="profile-details"
+                style="
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  height: 30px;
+                  width: 30px;
+                "
+                src="/man.jpeg"
+              />nasser</a
+            >
+          </li>
+
+          <li>
+            <a href="#" style="color: white; font-family: Alef"
+              ><i class="fas fa-sign-out-alt"></i>logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      style="
+        margin-left: 300px;
+        border-radius: 15px;
+        width: 1120px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0c0808;
+        padding: 10px;
+      "
+    >
+      <img
+        style="position: relative; left: 0; width: 100px; height: 100px"
+        src="{{data[0].teamLogo}}"
+      />
+      <p style="font-size: 24px; font-weight: bold; color: #f1ecec; margin: 0">
+        {{data[0].teamName}}
+      </p>
+    </div>
+    <div class="main">
+      {%for player in data%}
+      <div
+        onclick="location.href='/leagues/{{player.leagueID}}/{{player.teamID}}/{{player.id}}'"
+        style="
+          width: 1120px;
+          height: 60px;
+          background: linear-gradient(to bottom, #618ac8, #070b11);
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <img
+          style="width: 50px; height: 50px; margin-right: 50px"
+          src="{{player.logo}}"
+        />
+        <a
+          style="
+            position: relative;
+            top: 0;
+            align-items: start;
+            font-family: Akaya Telivigala;
+            font-size: 20px;
+          "
+          >{{player.name}}</a
+        >
+      </div>
+      {% endfor %}
+      <!-- <div
+        onclick="location.href='player.html'"
+        style="
+          width: 1120px;
+          height: 60px;
+          background: linear-gradient(to bottom, #618ac8, #070b11);
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <img
+          style="width: 50px; height: 50px; margin-right: 50px"
+          src="saka.png"
+        />
+        <a
+          style="
+            position: relative;
+            top: 0;
+            align-items: start;
+            font-family: Akaya Telivigala;
+            font-size: 20px;
+          "
+          >bokayo saka</a
+        >
+      </div>
+
+      <div
+        onclick="location.href='player.html'"
+        style="
+          width: 1120px;
+          height: 60px;
+          background: linear-gradient(to bottom, #618ac8, #070b11);
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <img
+          style="width: 50px; height: 50px; margin-right: 50px"
+          src="saka.png"
+        />
+        <a
+          style="
+            position: relative;
+            top: 0;
+            align-items: start;
+            font-family: Akaya Telivigala;
+            font-size: 20px;
+          "
+          >bokayo saka</a
+        >
+      </div>
+
+      <div
+        onclick="location.href='player.html'"
+        style="
+          width: 1120px;
+          height: 60px;
+          background: linear-gradient(to bottom, #618ac8, #070b11);
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <img
+          style="width: 50px; height: 50px; margin-right: 50px"
+          src="saka.png"
+        />
+        <a
+          style="
+            position: relative;
+            top: 0;
+            align-items: start;
+            font-family: Akaya Telivigala;
+            font-size: 20px;
+          "
+          >bokayo saka</a
+        >
+      </div> -->
+    </div>
+  </body>
+</html>

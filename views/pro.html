@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="/eyad.css" />
+
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <form
+        action="https://www.google.com/search"
+        method="get"
+        class="search-bar"
+      >
+        <input type="text" placeholder="Search..." />
+        <!--        <button type="submit"><img src="search.png"> </button>-->
+      </form>
+      <ul>
+        <li>
+          <a href="/" style="color: white; font-family: Alef"
+            ><i class="fas fa-home"></i>home</a
+          >
+        </li>
+
+        <li>
+          <a href="proinitial.html" style="color: white; font-family: Alef"
+            ><i style="margin-right: 20px" class="fas fa-heart"></i>favorite</a
+          >
+        </li>
+      </ul>
+
+      <div style="position: fixed; bottom: 0">
+        <hr width="250px" style="margin-right: 10px; margin-left: 20px" />
+        <ul>
+          <li>
+            <a
+              href="#"
+              style="color: white; font-family: Alef; font-size: large"
+              ><img
+                class="profile-details"
+                style="
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  height: 30px;
+                  width: 30px;
+                "
+                src="/man.jpeg"
+              />nasser</a
+            >
+          </li>
+
+          <li>
+            <a href="login.html" style="color: white; font-family: Alef"
+              ><i class="fas fa-sign-out-alt"></i>logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-left: 290px; width: 75.5%">
+      <div class="headerLogo">
+        <img
+          id="LLogo"
+          src="/Premier League.png"
+          alt="Premier League"
+          title="Logo"
+        />
+      </div>
+      <div class="ptable">
+        <!-- </table> -->
+        <table>
+          <tr class="col">
+            <th>POS</th>
+            <th>CLUB</th>
+            <th>PL</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GD</th>
+            <th>PTS</th>
+          </tr>
+          {% for team in data %}
+          <tr class="pos">
+            <td
+              onclick="location.href='/leagues/{{team.leagueID}}/{{team.id}}'"
+            >
+              {{loop.index}}
+            </td>
+            <td
+              onclick="location.href='/leagues/{{team.leagueID}}/{{team.id}}'"
+            >
+              <img id="Logo" src="{{team.logo}}" alt="ARSENAL" title="Logo" />
+              {{team.name}}
+            </td>
+            <td>{{team.played}}</td>
+            <td>{{team.wins}}</td>
+            <td>{{team.draws}}</td>
+            <td>{{team.lose}}</td>
+            <td>{{team.gd}}</td>
+            <td>{{team.points}}</td>
+          </tr>
+          {% endfor %}
+          <!-- <tr class="pos">
+                                <td>2</td>
+                                <td>
+                                    <img id="Logo" src="LIV.png" alt="Liverpool" title="Logo">
+                                    LIV
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>3</td>
+                                <td>
+                                    <img id="Logo" src="CHE.png" alt="CHELSE" title="Logo">
+                                    CHE
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>4</td>
+                                <td>
+                                    <img id="Logo" src="MAN CITY.png" alt="Manchster CITY" title="Logo">
+                                    MAN CITY
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>5</td>
+                                <td>
+                                    <img id="Logo" src="MAN UNITED.png" alt="Manchster UNITED" title="Logo">
+                                        MAN UNITED
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>6</td>
+                                <td>
+                                    <img id="Logo" src="TOT.png" alt="Tottenham" title="Logo">
+                                    TOT
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>7</td>
+                                <td>
+                                    <img id="Logo" src="LEICESTER.png" alt="LEICESTER" title="Logo">
+                                    LEI
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>8</td>
+                                <td>
+                                    <img id="Logo" src="EVE.png" alt="EVERTON" title="Logo">
+                                    EVE
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>9</td>
+                                <td>
+                                    <img id="Logo" src="NEWC.png" alt="NEWC" title="Logo">
+                                    NEWC
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr>
+                            <tr class="pos">
+                                <td>10</td>
+                                <td>
+                                    <img id="Logo" src="NOTTINGHAM.png" alt="NOTTINGHAM" title="Logo">
+                                    NOTTINGHAM
+                                    </td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                            </tr> -->
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

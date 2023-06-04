@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: linear-gradient(116.82deg, #5869A6 18.53%, rgba(81, 80, 154, 0.891074) 32.21%, rgba(29, 13, 63, 0.83) 62.02%, rgba(16, 19, 60, 0.76) 81.74%, rgba(11, 22, 60, 0.75) 95.79%);
+  background-blend-mode: darken;
+height: 650px;
+  padding: 0;
+  margin: 0;
+
+}
+::selection{
+  color: #fff;
+  background: rgba(192, 192, 192, 0.43);
+}
+.wrapper{
+  width: 500px;
+  height: 350px;
+  padding: 40px 30px 50px 30px;
+  background: rgba(245, 245, 245, 0.43);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  margin: 100px auto;
+
+  
+}
+
+.wrapper header{
+  font-size: 35px;
+  font-weight: 600;
+  color: #ffffff;
+
+}
+.wrapper form{
+  margin: 40px 0;
+
+}
+
+form .field{
+  width: 100%;
+  margin-bottom: 20px;
+  
+}
+form .field.shake{
+  animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+form .field .input-area{
+  height: 50px;
+  width: 100%;
+  position: relative;
+
+}
+form input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  background: #565c76;
+  border-radius: 5px;
+  border: 1px solid #4a4f66;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+  color: #ffffff;
+
+}
+form .field input:focus,
+form .field.valid input{
+  border-color: #3e3853;
+  color: #ffffff;
+
+}
+
+.field .input-area i{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);  
+  
+}
+.input-area .icon{
+  left: 15px;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+form input:focus ~ .icon,
+form .field.valid .icon{
+  color: #0B163C;
+}
+
+form input::placeholder{
+  color: #ffffff;
+  font-size: 17px;
+}
+
+
+form .pass-txt{
+  text-align: left;
+  margin-top: -10px;
+  
+}
+.wrapper a{
+  color: #ffffff;
+  text-decoration: none;
+
+}
+.wrapper a:hover{
+  text-decoration: underline;
+}
+
+form input[type="submit"]{
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: rgba(245, 245, 245, 0.43);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form input[type="submit"]:hover{
+  background: rgba(192, 192, 192, 0.43);
+}
+.sign-txt{
+  color: #ffffff;
+  text-align: right;
+  padding-top: 30px;
+}

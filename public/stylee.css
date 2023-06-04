@@ -1,0 +1,132 @@
+*{
+    justify-content:space-evenly;
+    color: white;
+    padding:0;
+
+}
+body {
+    background-color: rgba(136, 143, 162, 0.57);
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, #2B4A78, #415890, #37366B, #152A49);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidebar a {
+    display: block;
+    color: #000;
+    padding: 16px;
+    text-decoration: none;
+}
+/*.sidebar a:hover {*/
+/*    background-color: #323436;*/
+/*}*/
+.main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+
+ul li:hover a {
+    padding-left: 50px;
+}
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    /* padding-left: 40px; */
+    box-sizing: border-box;
+    /* border-top: 1px solid rgba(255, 255, 255, 1); */
+    /* border-bottom: 1px solid black; */
+    transition: 0.4s;
+}
+.sidebar ul a i {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+/* .container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+form {
+    display: flex;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    color: white;
+    /* padding: 0px; */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+::placeholder {
+    color: white;
+    font-size: small;
+}
+.search-bar {
+    margin: 0px 0px 0px 10px;
+    width: 90%;
+    height: 40px;
+    max-width: 300px;
+    background: Rgba(255, 255, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+}
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+.search-bar button img {
+    width: 25px;
+}
+/* .sidebar .profile-details {
+  position: fixed;
+  bottom: 0;
+} */
+.sidebar .profile-details img {
+    display: inline;
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar img {
+    display: inline;
+}
+
+.sidebar hr {
+    opacity: 100;
+    height: 2px;
+}
+
+.main{
+    margin-left: 280px;
+}
