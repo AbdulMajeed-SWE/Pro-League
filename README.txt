@@ -1,9 +1,11 @@
-Name: Football Stats
+Pro-League
 
 Description:
 
-a webApp that tracks football statistics for both teams and players, it also allows useres to pick their favorite players
-
+A fully Dynamic Website that 
+provide Stats and information for
+Football most well-Known 
+Leagues and their Players
 installation: 
 
 this project require these external installs :
